@@ -1,9 +1,9 @@
 package test;
 
-import org.junit.Test;
 import CS3213.LinesProcessor;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
-import java.util.*;
 /**
  * Created by lareinating on 3/9/16.
  */
@@ -17,5 +17,13 @@ public class LinesProcessorTest {
         assertTrue(res.length == 4);
         assertEquals("tomorrow line", res[0]);
         assertEquals("may day", res[3]);
+
+        LinesProcessor linesProcessor2 = new LinesProcessor();
+        String[] lines2 = {""};
+        linesProcessor2.addLines(lines2);
+        String[] res2 = linesProcessor2.getProcessedLines();
+        assertTrue(res2.length == 1);
+        assertEquals("", res2[0]);
+        assertFalse(res2.length == 0);
     }
 }

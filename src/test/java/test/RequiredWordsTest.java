@@ -24,5 +24,10 @@ public class RequiredWordsTest {
         requiredWords.removeRequiredWord("tomorrow");
         assertFalse(requiredWords.isRequiredWord("tomorrow"));
         assertTrue(requiredWords.isRequiredWord("me"));
+
+        requiredWords.addRequiredWord("");
+        requiredWords.removeRequiredWord("me");
+        assertTrue(requiredWords.isRequiredWord(""));
+        assertFalse(requiredWords.isRequiredWord("me"));
     }
 }
