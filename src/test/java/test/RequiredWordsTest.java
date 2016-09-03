@@ -19,5 +19,14 @@ public class RequiredWordsTest {
         assertTrue(res.length == 2);
         assertEquals("tomorrow line", res[0]);
         assertEquals("may day", res[3]);
+
+        String[] lines2 = {"Tomorrow line", "no line", "A Test", "May day"};
+        RequiredWords reqWords2 = new RequiredWords(Arrays.asList("tomorrow", "A"), lines2);
+        String[] res2 = reqWords2.getLines();
+        assertTrue(res2.length == 2);
+        assertEquals("Tomorrow line", res[0]);
+        assertEquals("A Test", res[1]);
+        assertFalse(res[1].equals("no line"));
+
     }
 }
