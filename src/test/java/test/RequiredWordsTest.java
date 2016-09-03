@@ -2,6 +2,7 @@ package test;
 
 import org.junit.Test;
 import CS3213.RequiredWords;
+import static org.junit.Assert.*;
 
 /**
  * Created by lareinating on 3/9/16.
