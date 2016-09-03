@@ -7,17 +7,17 @@ import java.util.HashSet;
  */
 public class WordsToIgnore {
     private HashSet<String> _wordsToIgnore;
-    private static WordsToIgnore _instatnce;
+    private static WordsToIgnore _instance;
     private WordsToIgnore() {
         this._wordsToIgnore = new HashSet<String>();
     }
 
     public static WordsToIgnore getWordsToIgnore() {
-        if (_instatnce == null) {
-            _instatnce = new WordsToIgnore();
+        if (_instance == null) {
+            _instance = new WordsToIgnore();
         }
 
-        return _instatnce;
+        return _instance;
     }
 
     public void addWordToIgnore(String word) {
