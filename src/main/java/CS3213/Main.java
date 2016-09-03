@@ -29,11 +29,24 @@ public class Main {
             inputWordToIgnore = sc.nextLine();
         }
 
+        System.out.println("Enter required words (terminate input by entering empty line)");
+        String requireWord = sc.nextLine();
+        RequiredWords requiredWords = RequiredWords.getRequiredWords();
+        while (!requireWord.isEmpty()) {
+            requiredWords.addRequiredWord(requireWord);
+            requireWord = sc.nextLine();
+        }
+
         Alphabetizer alphabetizer = new Alphabetizer();
+        LinesProcessor linesProcessor = new LinesProcessor();
+
         for (String str : inputs) {
             CircularShift shifter = new CircularShift(str);
-            alphabetizer.addLines(shifter.getCircularShifts());
+            linesProcessor.addLines(shifter.getCircularShifts());
+//            alphabetizer.addLines(shifter.getCircularShifts());
         }
+
+        alphabetizer.addLines(linesProcessor.getProcessedLines());
 
         String[] result = alphabetizer.getSortedLines();
         StringBuilder builder = new StringBuilder();
