@@ -9,7 +9,7 @@ import CS3213.RequiredWords;
 public class RequiredWordsTest {
     @Test
     public void testIsRequiredWord() throws Exception {
-        RequireWords requiredWords = RequiredWords.getRequiredWords();
+        RequiredWords requiredWords = RequiredWords.getRequiredWords();
 
         assertFalse(requiredWords.isRequiredWord("Tomorrow"));
 
