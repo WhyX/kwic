@@ -22,7 +22,7 @@ public class LinesProcessorTest {
 
         LinesProcessor linesProcessor2 = new LinesProcessor();
         String[] lines3 = {"Tomorrow line", "no line", "A test", "may Day"};
-        linesProcessor2.addLines(line3);
+        linesProcessor2.addLines(lines3);
         String[] res2 =  linesProcessor2.getProcessedLines();
         assertTrue(res2.length == 2);
         assertEquals("Tomorrow line", res[0]);
