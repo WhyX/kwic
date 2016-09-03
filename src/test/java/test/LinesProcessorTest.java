@@ -13,7 +13,6 @@ public class LinesProcessorTest {
         LinesProcessor linesProcessor = new LinesProcessor();
         String[] lines1 = {"tomorrow line", "no line", "a test", "may day"};
         linesProcessor.addLines(lines1);
-        linesProcessor.addLines(lines2);
         String[] res =  linesProcessor.getProcessedLines();
         assertTrue(res.length == 4);
         assertEquals("tomorrow line", res[0]);
