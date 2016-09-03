@@ -36,6 +36,6 @@ public class RequiredWords {
 
     public boolean isRequiredWord(String word) {
         assert(word != null);
-        return this._requiredWords.contains(word);
+        return this._requiredWords.contains(word.toLowerCase());
     }
 }
